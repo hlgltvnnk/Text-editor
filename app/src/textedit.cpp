@@ -22,16 +22,16 @@ void TextEdit::setText(QString path) {
 }
 
 void TextEdit::changeText(QString info) {
-        text.setPlainText(info);
+    text.setPlainText(info);
 }
 
 void TextEdit::saveFile(QString info) {
-       std::cout<< filename.toLocal8Bit().data() <<std::endl;
-       changeText(info);
-       QFile file(filename);
-       file.open(QIODevice::ReadWrite);
-       QDataStream out(&file);
-       out.setVersion(QDataStream::Qt_4_5);
-       out<< text.toPlainText().toLocal8Bit().data();
-       file.close();
+    std::cout<< filename.toLocal8Bit().data() <<std::endl;
+    changeText(info);
+    QFile file(filename);
+    file.open(QIODevice::ReadWrite);
+    QDataStream out(&file);
+    out.setVersion(QDataStream::Qt_4_5);
+    out<< text.toPlainText().toLocal8Bit().data();
+    file.close();
 }

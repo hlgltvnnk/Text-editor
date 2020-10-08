@@ -6,9 +6,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    connect( ui->actionLogo, &QAction::triggered, this, &MainWindow::on_actionLogo_triggered);
+    connect(ui->actionLogo, &QAction::triggered, this, &MainWindow::on_actionLogo_triggered);
     connect(ui->mainToolBar, &QToolBar::topLevelChanged, this, &MainWindow::changeToolBarSize);
-
+    connect(ui->actionCopy, &QAction::triggered, this, &MainWindow::copyString);
+    connect(ui->actionCut, &QAction::triggered, this, &MainWindow::cutString);
+    connect(ui->actionPaste, &QAction::triggered, this, &MainWindow::pasteString);
 }
 
 MainWindow::~MainWindow()

@@ -20,16 +20,16 @@ namespace Ui {
 class MainWindow;
 }
 
-    class TextEdit : public QObject {
+class TextEdit : public QObject {
 
-    public:
-        TextEdit(QString path);
-        ~TextEdit();
-        QString filename;
-        QString buf;
-        QTextDocument text;
+public:
+    TextEdit(QString path);
+    ~TextEdit();
+    QString filename;
+    QString buf;
+    QTextDocument text;
 
-        void setText(QString path);
-        void changeText(QString info);
-        void saveFile(QString info);
-    };
+    void setText(QString path);
+    void changeText(QString info);
+    void saveFile(QString info);
+};

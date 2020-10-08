@@ -129,6 +129,7 @@ void MainWindow::on_actionLogo_triggered()
     connect(openDirAction, &QAction::triggered, this, &MainWindow::chooseDir);
     connect(openFileAction, &QAction::triggered, this, &MainWindow::chooseFile);
     connect(saveAsAction,  &QAction::triggered, this, &MainWindow::saveFileAs);
+    // connect()
     if (!currentFile.isEmpty()) {
     connect(saveAction,  &QAction::triggered, [this]() {
         Files[currentFile]->saveFile(ui->TextEditor->toPlainText());});
@@ -142,7 +143,22 @@ void MainWindow::on_actionLogo_triggered()
     menu->addAction(openFileAction);
     menu->addAction(saveAction);
     menu->addAction(saveAsAction);
-
     ui->actionLogo->setMenu(menu);
     menu->popup(QCursor::pos());
 }
+
+//ЕНТО Я СДЕЛАЛЬ ВОТ ДА ВОТ ТАК ВОТ ДА ДА
+
+void MainWindow::copyString() {
+    qDebug() << "copy";
+}
+
+void MainWindow::cutString() {
+    qDebug() << "cut";
+}
+
+void MainWindow::pasteString() {
+    qDebug() << "paste";
+}
+
+//END

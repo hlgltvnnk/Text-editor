@@ -42,6 +42,12 @@ public slots:
     void FileClicked(QModelIndex index);
     void resizeEvent(QResizeEvent *event);
     void on_actionLogo_triggered();
+    
+    //ЕНТО СДЕЛАЛЬ Я ВОТ ДА ВОТ ТАК ВОТ ДА ДА
+    void copyString();
+    void cutString();
+    void pasteString();
+    //END 
 };
 
 #endif // MAINWINDOW_H
