@@ -15,12 +15,12 @@ set(SOURCE_EXE main.cpp)
 
 project(${NAME})
 
-add_compile_options(
-    -Wall
-    -Wextra
-    -Werror
-    -Wpedantic
-)
+#add_compile_options(
+#    -Wall
+#    -Wextra
+#    -Werror
+#    -Wpedantic
+#)
 
 find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
